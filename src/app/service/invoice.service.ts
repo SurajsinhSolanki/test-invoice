@@ -10,19 +10,18 @@ export class InvoiceService {
   constructor(private http: HttpClient) { }
 
   createInvoice(data: any) {
-    return this.http.post('https://e533-2402-a00-404-ec92-2cd9-6f3f-77fa-c4b.ngrok-free.app/invoices', data);
+    return this.http.post('http://localhost:3000/invoices', data);
   }
 
-  getInvoices() {
-    return this.http.get('https://e533-2402-a00-404-ec92-2cd9-6f3f-77fa-c4b.ngrok-free.app/invoices');
+  getInvoices(searchQuery:string) {
+    return this.http.get(`http://localhost:3000/invoices?search=${searchQuery}`);
   }
 
-
-  getInvoiceDetail() {
-    return this.http.get('');
+  getInvoiceDetail(invoiceNumber:string) {
+    return this.http.get(`http://localhost:3000/invoices/${invoiceNumber}`);
   }
 
-  updateInvoice(data: any) {
-    return this.http.put('', data);
+  deleteInvoice(id:number){
+    return this.http.delete(`http://localhost:3000/invoices/${id}`);
   }
 }

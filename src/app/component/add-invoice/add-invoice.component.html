@@ -1,55 +1,52 @@
-<h1 mat-dialog-title>Create Invoice</h1>
-<div mat-dialog-content>
-  <form [formGroup]="invoiceForm" (ngSubmit)="saveInvoce()">
-    <mat-form-field appearance="fill">
-      <mat-label>Invoice Date</mat-label>
-      <input matInput formControlName="invoiceDate" type="date" />
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>From Name</mat-label>
-      <input matInput formControlName="fromName" />
-    </mat-form-field>
-
-    <mat-form-field appearance="fill">
-      <mat-label>From Address</mat-label>
-      <input matInput formControlName="fromAddress" />
-    </mat-form-field>
-
-    <mat-form-field appearance="fill">
-      <mat-label>To Name</mat-label>
-      <input matInput formControlName="toName" />
-    </mat-form-field>
-
-    <mat-form-field appearance="fill">
-      <mat-label>To Address</mat-label>
-      <input matInput formControlName="toAddress" />
-    </mat-form-field>
-
-    <h2>Items</h2>
-    <div formArrayName="items">
-      <div *ngFor="let item of items.controls; let i = index" [formGroupName]="i">
-        <mat-form-field appearance="fill">
+<h1 mat-dialog-title class="dialog-title">Create Invoice</h1>
+<div mat-dialog-content class="dialog-content">
+  <form [formGroup]="invoiceForm" (ngSubmit)="saveInvoce()" class="invoice-form">
+    <div class="form-section">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Invoice Date</mat-label>
+        <input matInput formControlName="invoiceDate" type="date" />
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>From Name</mat-label>
+        <input matInput formControlName="fromName" />
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>From Address</mat-label>
+        <input matInput formControlName="fromAddress" />
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>To Name</mat-label>
+        <input matInput formControlName="toName" />
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>To Address</mat-label>
+        <input matInput formControlName="toAddress" />
+      </mat-form-field>
+    </div>
+    <h2 class="section-title">Items</h2>
+    <div formArrayName="items" class="items-section">
+      <div *ngFor="let item of items.controls; let i = index" [formGroupName]="i" class="item-row">
+        <mat-form-field appearance="fill" class="item-field">
           <mat-label>Item Name</mat-label>
           <input matInput formControlName="itemName" />
         </mat-form-field>
-
-        <mat-form-field appearance="fill">
+        <mat-form-field appearance="fill" class="item-field">
           <mat-label>Quantity</mat-label>
           <input matInput formControlName="quantity" type="number" />
         </mat-form-field>
-
-        <mat-form-field appearance="fill">
+        <mat-form-field appearance="fill" class="item-field">
           <mat-label>Rate</mat-label>
           <input matInput formControlName="rate" type="number" />
         </mat-form-field>
-
         <button mat-icon-button type="button" color="warn" (click)="removeItem(i)" *ngIf="items.length > 1">
-          X
+          <mat-icon>delete</mat-icon>
         </button>
       </div>
     </div>
-    <button mat-raised-button type="button" color="primary" (click)="addItem()">Add Item</button>
-    <div mat-dialog-actions>
+    <button mat-raised-button type="button" color="primary" (click)="addItem()" class="add-item-button">
+      Add Item
+    </button>
+    <div mat-dialog-actions class="dialog-actions">
       <button mat-raised-button color="primary" type="submit">Save</button>
       <button (click)="closepopup()" type="button" mat-raised-button color="warn">Close</button>
     </div>

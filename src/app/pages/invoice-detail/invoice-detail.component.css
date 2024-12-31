@@ -1,0 +1,101 @@
+/* Card Container */
+.invoice-detail-card {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+.card-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.invoice-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #424242;
+    margin: 0;
+}
+
+/* Back Button */
+.back-button {
+    margin: 16px;
+}
+
+/* Summary Section */
+.invoice-summary {
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.invoice-summary h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #616161;
+    margin-bottom: 16px;
+}
+
+.invoice-summary p {
+    margin: 0;
+    font-size: 14px;
+    color: #424242;
+}
+
+/* Items Section */
+.invoice-items h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #616161;
+    margin-bottom: 16px;
+}
+
+.invoice-items table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+mat-header-cell,
+mat-cell {
+    padding: 16px;
+    font-size: 14px;
+}
+
+mat-header-cell {
+    font-weight: bold;
+    background-color: #f5f5f5;
+}
+
+mat-cell {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .summary-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .invoice-summary p {
+        font-size: 12px;
+    }
+
+    mat-header-cell,
+    mat-cell {
+        font-size: 12px;
+        padding: 8px;
+    }
+}

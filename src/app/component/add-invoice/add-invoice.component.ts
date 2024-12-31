@@ -6,11 +6,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { CommonModule } from '@angular/common';
 import { InvoiceService } from '../../service/invoice.service';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-add-invoice',
   imports: [MatDialogModule, MatFormFieldModule, MatInputModule, FormsModule, MatButtonModule, ReactiveFormsModule
-    , CommonModule
+    , CommonModule, MatIconModule
   ],
   templateUrl: './add-invoice.component.html',
   styleUrl: './add-invoice.component.css',

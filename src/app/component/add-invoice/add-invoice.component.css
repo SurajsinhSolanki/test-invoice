@@ -1,0 +1,60 @@
+.dialog-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.dialog-content {
+    padding: 16px;
+}
+
+.invoice-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.section-title {
+    margin-top: 24px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.items-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.item-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.item-field {
+    flex: 1;
+}
+
+.add-item-button {
+    margin-top: 16px;
+    align-self: flex-start;
+}
+
+.dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 24px;
+}
