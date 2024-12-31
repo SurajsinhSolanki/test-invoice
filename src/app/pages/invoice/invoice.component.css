@@ -1,0 +1,41 @@
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+.move-right {
+    padding: 0.5rem 1rem;
+}
+
+.invoice-card {
+    margin: 20px;
+  }
+  
+  .button-container {
+    margin: 20px;
+    text-align: right;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  mat-card {
+    padding: 20px;
+  }
+  
+  button {
+    margin-right: 10px;
+  }
+  
+  @media (max-width: 600px) {
+    .invoice-card {
+      padding: 10px;
+    }
+  
+    table {
+      font-size: 12px;
+    }
+  }
+  
